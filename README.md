@@ -21,10 +21,30 @@ Create Read Update Delete using localStorage with JS, HTML and CSS
 - [x] Display stored value in proper div
 
 ### Next Sprint (what are we trying to code)
-Examples: Replace with your own.
-- [ ] animate when new data is added
-- [ ] color code the data by timestape (older more greyed out)
-- [ ] Read from yelp api to get good bagel advice in a city
-- [ ] save my local storage to a remote storage for back up
+#### Overview:
+I'd like to build a note-keeping app. At the most basic level, this app should be able to:
+
+- [ ] Allow the user to create notes that include:
+    - [ ] A title
+    - [ ] Content
+    - [ ] Delete button
+- [ ] Store users notes
+- [ ] Allow the user to view all their notes
+- [ ] Allow the user to delete their notes using a delete btn attached to each note
+- [ ] Allow the user to edit their notes simply by clicking on it
+
+Optional:
+
+- [ ] Allow the user to set a colour scheme for the site
+- [ ] Allow the user to edit the title
+- [ ] Include a timestamp w/ each note
+- [ ] Allow the user to style the content of their notes
+    - [ ] Bold
+    - [ ] Italic
+    - [ ] Underline
+    - [ ] Font-size
+    - [ ] Font-colour
+- [ ] 
+
 
 - [ ] Optional: Host on repl.it (html,css, js)
