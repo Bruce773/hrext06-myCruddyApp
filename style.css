@@ -1,0 +1,15 @@
+body{
+   text-align: center;
+}
+.main-header-section h1{
+   margin-bottom: 0px;
+}
+.main-header-section h2{
+   margin-top:0px;
+}
+.main-header-section{
+   margin:10px;
+}
+.create-notes-section{
+   margin:20px;
+}
