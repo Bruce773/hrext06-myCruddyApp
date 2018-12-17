@@ -9,19 +9,22 @@
       crossorigin="anonymous"
     ></script>
     <script src="app.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lobster+Two"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="main-header-section">
-      <h1>SNK</h1>
-      <h2>Simple Note Keeping</h2>
+    <div class="main-header-section"><h1>Simple Note Keeping</h1></div>
+    <div class="main-container">
+      <div class="create-notes-section">
+        <input class="text-entry-title" type="text" placeholder="Title" />
+        <input class="text-entry-content" type="text" placeholder="content" />
+        <button class="btn-submit" type="button">Save Value</button>
+        <button class="btn-delete" type="button">Delete Value</button>
+        <button class="btn-delete-all" type="button">Delete ALL</button>
+      </div>
+      <div class="list-display-field">nothing to display yet</div>
     </div>
-    <div class="create-notes-section">
-      <input class="text-entry-title" type="text" placeholder="Title" />
-      <input class="text-entry-content" type="text" placeholder="content" />
-      <button class="btn-submit" type="button">Save Value</button>
-      <button class="btn-delete" type="button">Delete Value</button>
-      <button class="btn-delete-all" type="button">Delete ALL</button>
-    </div>
-    <div class="list-display-field">nothing to display yet</div>
   </body>
 </html>

@@ -1,14 +1,22 @@
 body{
    text-align: center;
+   background-image: url('diagonal-squares/diagonal-squares.png');
 }
 .main-header-section h1{
-   margin-bottom: 0px;
-}
-.main-header-section h2{
    margin-top:0px;
+   color: white;
 }
 .main-header-section{
+   font-family: 'Lobster Two', cursive;
    margin:10px;
+}
+.main-container{
+   margin:auto;
+   background-color: white;
+   border-radius: 10px;
+   padding: 15px;
+   padding-top: 1px;
+   width: 80%;
 }
 .create-notes-section{
    margin:20px;

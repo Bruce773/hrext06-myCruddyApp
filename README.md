@@ -33,6 +33,8 @@ I'd like to build a note-keeping app. At the most basic level, this app should b
 - [ ] Allow the user to delete their notes using a delete btn attached to each note
 - [ ] Allow the user to edit their notes simply by clicking on it
 
+- [ ] Styling should also be included in this section. It doesn't have to be perfect, however, it should have a bit of a refined look (ie. NOT a site from 1995).
+
 Optional:
 
 - [ ] Allow the user to set a colour scheme for the site
