@@ -17,4 +17,8 @@ $(document).ready(function(){
     localStorage.removeItem($('.text-entry-title').val());
   });
 
+  $('.btn-delete-all').on('click', function(){
+    localStorage.clear();
+  })
+
 });
