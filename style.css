@@ -19,10 +19,14 @@ body{
    width: 80%;
 }
 .create-notes-section{
-   margin:20px;
+   /* margin:20px; */
+   margin:auto;
+   margin-top:10px;
+   margin-bottom:10px;
    background-color: lightgrey;
    padding: 15px;
-   border-radius: 4px;
+   border-radius: 6px;
+   width: 70%;
 }
 .text-entry-title{
    display: block;
@@ -37,4 +41,35 @@ body{
    margin-top: 6px;
    margin-bottom: 6px;
    font-size: 15px;
+}
+button{
+   cursor: pointer;
+}
+.btn-delete-all{
+   text-align:right;
+}
+.btn-delete-all button{
+   padding:10px;
+   border-radius: 6px;
+   background-color: red;
+   color:white;
+   font-size:15px;
+}
+.btn-delete-all button:hover{
+   background-color: brown;
+}
+.btn-submit{
+   text-align:right;
+   margin:auto;
+   padding:6px;
+   border-radius: 5px;
+   font-size: 15px;
+}
+.btn-submit button{
+   background-color: white;
+   color:black;
+}
+.btn-submit button:hover{
+   background-color: grey;
+   color:white;
 }
