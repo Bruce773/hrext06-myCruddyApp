@@ -13,11 +13,28 @@ body{
 .main-container{
    margin:auto;
    background-color: white;
-   border-radius: 10px;
+   border-radius: 6px;
    padding: 15px;
-   padding-top: 1px;
+   padding-top: 8px;
    width: 80%;
 }
 .create-notes-section{
    margin:20px;
+   background-color: lightgrey;
+   padding: 15px;
+   border-radius: 4px;
+}
+.text-entry-title{
+   display: block;
+   border-radius: 6px;
+   font-size: 20px;
+}
+.text-entry-content{
+   display: block;
+   width: 99%;
+   min-height: 100px; 
+   border-radius: 6px;
+   margin-top: 6px;
+   margin-bottom: 6px;
+   font-size: 15px;
 }
