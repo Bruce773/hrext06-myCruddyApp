@@ -17,7 +17,8 @@ $(document).ready(function(){
     localStorage.removeItem($('.text-entry-title').val());
   });
 
-  $('.btn-delete-all').on('click', function(){
+  $('.btn-delete-all').on('click','.btn-delete-all', function(){
+    alert('Are you sure you want to delete ALL your notes? This action can NOT be undone!')
     localStorage.clear();
   })
 
