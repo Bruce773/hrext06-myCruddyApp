@@ -46,7 +46,6 @@ Optional:
     - [ ] Underline
     - [ ] Font-size
     - [ ] Font-colour
-- [ ] 
 
 
 - [ ] Optional: Host on repl.it (html,css, js)
