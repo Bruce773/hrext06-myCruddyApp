@@ -6,20 +6,20 @@ $(document).ready(function() {
     // console.log($('.text-entry-title').val(), myItemInStorage);
     // create a div class = 'note'
     idCounter++;
-    var noteDiv = $(`<div data-note='${idCounter}' class='note-data note'></div>`);
+    var noteDiv = $(`<div data-note='${idCounter}' class='note'></div>`);
     //append title
     var titleSpan = $(
-      `<span data-note='${idCounter}' class="note-data title"></span>`
+      `<span data-note='${idCounter}' class="title"></span>`
     ).text(title);
     noteDiv.append(titleSpan);
     //append content
     var contentDiv = $(
-      `<div data-note='${idCounter}' class="note-data content"></div>`
+      `<div data-note='${idCounter}' class="content"></div>`
     ).text(content);
     noteDiv.append(contentDiv);
     //append delete
     noteDiv.append(
-      `<div data-note='${idCounter}' class="note-data delete-this-note"><button data-note='${idCounter}' class="note-data delete-this-note">Delete Note</button></div>`
+      `<div data-note='${idCounter}' class="delete-this-note"><button data-note='${idCounter}' class="delete-this-note">Delete Note</button></div>`
     );
     // append div to $('.list-display-field')
     $(".list-display-field").append(noteDiv);
@@ -44,6 +44,7 @@ $(document).ready(function() {
         "<p class='no-notes-p-tag'>You haven't created any notes yet.</p>"
       );
     } else {
+      $(".list-display-field").html(" ");
       repopulateNotesOnPage();
     }
   };
@@ -82,6 +83,7 @@ $(document).ready(function() {
     // console.log($(`button.${thisId}`));
     localStorage.removeItem(titleText);
     $(`[data-note='${thisClasses}']`).remove();
+    autoRepopulateFunc();
     // target all elements with the class note-data and $(this).attr("id")
     // .remove them
   });

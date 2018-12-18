@@ -3,6 +3,12 @@ body {
   background-image: url("diagonal-squares/diagonal-squares.png");
   font-family: 'Crimson Text', serif;
 }
+button{
+   transition: all .2s ease-in-out;
+}
+button:hover{
+   transform: scale(1.1);
+}
 .main-header-section h1 {
   margin-top: 0px;
   color: white;
@@ -93,6 +99,17 @@ button {
   /* display:block; */
   text-align: right;
   /* margin:auto; */
+}
+.delete-this-note button{
+   font-size: 16px;
+   border-radius: 8px;
+   background-color: rgb(216, 87, 87); 
+   color: white;
+   padding: 6px;
+}
+.delete-this-note button:hover{
+   background-color: rgb(255, 0, 0);
+   color: white; 
 }
 .content {
   margin-top: 10px;
