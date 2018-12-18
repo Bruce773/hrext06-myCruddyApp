@@ -1,19 +1,19 @@
 $(document).ready(function(){ 
   console.log('jQuery loaded');
+  console.log(localStorage.key(0)); 
 
+  //use localStorage.key() to iterate over localStorage
   //iterate over localStorage, clear DOM, and append all notes in correct format
   
-  var appendNoteDiv = function(){
-    var myItemInStorage = localStorage.getItem($('.text-entry-title').val());
+  var appendNoteDiv = function(title, content){
     // console.log($('.text-entry-title').val(), myItemInStorage);
-
     // create a div class = 'note'
     var noteDiv = $('<div class="note"></div>');
     //append title
-    var title = $('<span class="title"></span>').text($('.text-entry-title').val()); //Update this to euqual the actual title
+    var title = $('<span class="title"></span>').text(title); //Update this to euqual the actual title
     noteDiv.append(title);
     //append content
-    noteDiv.append(myItemInStorage);
+    noteDiv.append(content);
     //append delete
     noteDiv.append('<div class="delete-this-note"><button class="delete-this-note">Delete Note</button></div>');
     // append div to $('.list-display-field')
@@ -26,7 +26,8 @@ $(document).ready(function(){
     // console.log($('.text-entry-title').val());
     if($('.text-entry-title').val() !== ''){
       localStorage.setItem($('.text-entry-title').val(), $('.text-entry-content').val());
-      appendNoteDiv();
+      var myItemInStorage = localStorage.getItem($('.text-entry-title').val());
+      appendNoteDiv($('.text-entry-title').val(), myItemInStorage); //Pass in (title, content)
     }
   });
 
