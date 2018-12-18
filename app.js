@@ -6,20 +6,20 @@ $(document).ready(function() {
     // console.log($('.text-entry-title').val(), myItemInStorage);
     // create a div class = 'note'
     idCounter++;
-    var noteDiv = $(`<div id=${idCounter} class='note'></div>`);
+    var noteDiv = $(`<div id=${idCounter} class='note-data note'></div>`);
     //append title
-    var titleSpan = $(`<span id=${idCounter} class="title"></span>`).text(
-      title
-    );
+    var titleSpan = $(
+      `<span id=${idCounter} class="note-data title"></span>`
+    ).text(title);
     noteDiv.append(titleSpan);
     //append content
-    var contentDiv = $(`<div id=${idCounter} class="content"></div>`).text(
-      content
-    );
+    var contentDiv = $(
+      `<div id=${idCounter} class="note-data content"></div>`
+    ).text(content);
     noteDiv.append(contentDiv);
     //append delete
     noteDiv.append(
-      `<div id=${idCounter} class="delete-this-note"><button id=${idCounter} class="delete-this-note">Delete Note</button></div>`
+      `<div id=${idCounter} class="note-data delete-this-note"><button id=${idCounter} class="note-data delete-this-note">Delete Note</button></div>`
     );
     // append div to $('.list-display-field')
     $(".list-display-field").append(noteDiv);
@@ -27,6 +27,7 @@ $(document).ready(function() {
   };
   var repopulateNotesOnPage = function() {
     //use localStorage.key() to iterate over localStorage
+    idCounter = 0;
     for (var i = 0; i < localStorage.length; i++) {
       //iterate over localStorage and append all notes in correct format
       // console.log(localStorage.key(i));
@@ -48,7 +49,7 @@ $(document).ready(function() {
   };
   autoRepopulateFunc();
   // write to local storage from input when button save clicked
-  $(".btn-submit").on("click", "button", function() {
+  $(".btn-submit").on("click", `button`, function() {
     // console.log($('.text-entry-title').val());
     if ($(".text-entry-title").val() !== "") {
       //if the title input is not blank
@@ -64,15 +65,22 @@ $(document).ready(function() {
 
       // $('.text-entry-content').html(' ')
       // console.log($('.text-entry-content').val());
-      
+
       // var myItemInStorage = localStorage.getItem($(".text-entry-title").val());
       // appendNoteDiv($(".text-entry-title").val(), myItemInStorage); //Pass in (title, content)
     }
   });
   // delete from local storage when delete button clicked
-  $(".delete-this-note").on("click", "button", function() {
+  $(".list-display-field").on("click", "button", function() {
+    //Delete button
     // console.log($(this).attr('class')); // get the attribute of the current button
-    console.log($(this).attr("id"));
+    // console.log($(this).attr("id"));
+    var thisId = $(this).attr("id");
+    console.log(thisId);
+    console.log($(`#${thisId}`));
+    $(`#${thisId}`).remove();
+    // target all elements with the class note-data and $(this).attr("id")
+    // .remove them
   });
 
   $(".btn-delete-all").on("click", ".btn-delete-all", function() {
