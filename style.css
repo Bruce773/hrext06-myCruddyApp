@@ -1,96 +1,108 @@
-body{
-   text-align: center;
-   background-image: url('diagonal-squares/diagonal-squares.png');
+body {
+  text-align: center;
+  background-image: url("diagonal-squares/diagonal-squares.png");
+  font-family: 'Crimson Text', serif;
 }
-.main-header-section h1{
-   margin-top:0px;
-   color: white;
+.main-header-section h1 {
+  margin-top: 0px;
+  color: white;
 }
-.main-header-section{
-   font-family: 'Lobster Two', cursive;
-   margin:10px;
+.main-header-section {
+  font-family: "Lobster Two", cursive;
+  margin: 10px;
 }
-.main-container{
-   margin:auto;
-   background-color: white;
-   border-radius: 6px;
-   padding: 15px;
-   padding-top: 8px;
-   width: 80%;
+.main-container {
+  margin: auto;
+  background-color: white;
+  border-radius: 6px;
+  padding: 15px;
+  padding-top: 8px;
+  width: 80%;
 }
-.create-notes-section{
-   /* margin:20px; */
-   margin:auto;
-   margin-top:10px;
-   margin-bottom:10px;
-   background-color: lightgrey;
-   padding: 15px;
-   border-radius: 6px;
-   width: 70%;
+.create-notes-section {
+  /* margin:20px; */
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: lightgrey;
+  padding: 15px;
+  border-radius: 6px;
+  width: 70%;
 }
-.text-entry-title{
-   display: block;
-   border-radius: 6px;
-   font-size: 20px;
+.text-entry-title {
+  display: block;
+  border-radius: 6px;
+  font-size: 20px;
 }
-.text-entry-content{
-   display: block;
-   width: 99%;
-   min-height: 100px; 
-   border-radius: 6px;
-   margin-top: 6px;
-   margin-bottom: 6px;
-   font-size: 15px;
+.text-entry-content {
+  display: block;
+  width: 99%;
+  min-height: 100px;
+  border-radius: 6px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  font-size: 15px;
 }
-button{
-   cursor: pointer;
+button {
+  cursor: pointer;
 }
-.btn-delete-all{
-   text-align:right;
+.btn-delete-all {
+  text-align: right;
 }
-.btn-delete-all button{
-   padding:10px;
-   border-radius: 6px;
-   background-color: red;
-   color:white;
-   font-size:15px;
+.btn-delete-all button {
+  padding: 10px;
+  border-radius: 6px;
+  background-color: red;
+  color: white;
+  font-size: 15px;
 }
-.btn-delete-all button:hover{
-   background-color: brown;
+.btn-delete-all button:hover {
+  background-color: brown;
 }
-.btn-submit{
-   text-align:right;
-   margin:auto;
-   padding:6px;
-   border-radius: 5px;
-   font-size: 15px;
+.btn-submit {
+  text-align: right;
+  margin: auto;
+  padding: 6px;
+  border-radius: 5px;
+  font-size: 15px;
 }
-.btn-submit button{
-   background-color: white;
-   color:black;
+.btn-submit button {
+  background-color: white;
+  color: black;
 }
-.btn-submit button:hover{
-   background-color: grey;
-   color:white;
+.btn-submit button:hover {
+  background-color: grey;
+  color: white;
 }
-.note{
-   background-color: lightgrey;
-   padding: 15px;
-   margin:auto;
-   margin-top: 10px;
-   border-radius: 8px;
-   width:70%;
+.note {
+  background-color: lightgrey;
+  padding: 15px;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 8px;
+  width: 70%;
 }
-.title{ 
-   display:block;
-   text-align:left;
-   font-size: 20px;
-   font-weight: bold;
+.title {
+  display: block;
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: underline;
 }
-.delete-this-note{
-   /* display:block; */
-   text-align:right;
-   /* margin:auto; */
+.delete-this-note {
+  /* display:block; */
+  text-align: right;
+  /* margin:auto; */
+}
+.content {
+  margin-top: 10px;
+  white-space: pre-wrap;
+  text-align: left;
+  font-size: 18px;
+}
+.no-notes-p-tag {
+  font-size: 20px;
+  font-weight: 500;
 }
 /* .delete-this-note-div{
    text-align:right;

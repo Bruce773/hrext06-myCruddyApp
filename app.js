@@ -8,10 +8,15 @@ $(document).ready(function() {
     idCounter++;
     var noteDiv = $(`<div id=${idCounter} class='note'></div>`);
     //append title
-    var title = $(`<span id=${idCounter} class="title"></span>`).text(title);
-    noteDiv.append(title);
+    var titleSpan = $(`<span id=${idCounter} class="title"></span>`).text(
+      title
+    );
+    noteDiv.append(titleSpan);
     //append content
-    noteDiv.append(content);
+    var contentDiv = $(`<div id=${idCounter} class="content"></div>`).text(
+      content
+    );
+    noteDiv.append(contentDiv);
     //append delete
     noteDiv.append(
       `<div id=${idCounter} class="delete-this-note"><button id=${idCounter} class="delete-this-note">Delete Note</button></div>`
@@ -35,7 +40,7 @@ $(document).ready(function() {
     if (localStorage.length === 0) {
       //if localStorage is empty
       $(".list-display-field").html(
-        "<p>You haven't created any notes yet.</p>"
+        "<p class='no-notes-p-tag'>You haven't created any notes yet.</p>"
       );
     } else {
       repopulateNotesOnPage();
@@ -57,6 +62,9 @@ $(document).ready(function() {
       $(".list-display-field").html(" ");
       repopulateNotesOnPage();
 
+      // $('.text-entry-content').html(' ')
+      // console.log($('.text-entry-content').val());
+      
       // var myItemInStorage = localStorage.getItem($(".text-entry-title").val());
       // appendNoteDiv($(".text-entry-title").val(), myItemInStorage); //Pass in (title, content)
     }
