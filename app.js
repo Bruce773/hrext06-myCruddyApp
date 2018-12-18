@@ -6,20 +6,20 @@ $(document).ready(function() {
     // console.log($('.text-entry-title').val(), myItemInStorage);
     // create a div class = 'note'
     idCounter++;
-    var noteDiv = $(`<div id=${idCounter} class='note-data note'></div>`);
+    var noteDiv = $(`<div data-note='${idCounter}' class='note-data note'></div>`);
     //append title
     var titleSpan = $(
-      `<span id=${idCounter} class="note-data title"></span>`
+      `<span data-note='${idCounter}' class="note-data title"></span>`
     ).text(title);
     noteDiv.append(titleSpan);
     //append content
     var contentDiv = $(
-      `<div id=${idCounter} class="note-data content"></div>`
+      `<div data-note='${idCounter}' class="note-data content"></div>`
     ).text(content);
     noteDiv.append(contentDiv);
     //append delete
     noteDiv.append(
-      `<div id=${idCounter} class="note-data delete-this-note"><button id=${idCounter} class="note-data delete-this-note">Delete Note</button></div>`
+      `<div data-note='${idCounter}' class="note-data delete-this-note"><button data-note='${idCounter}' class="note-data delete-this-note">Delete Note</button></div>`
     );
     // append div to $('.list-display-field')
     $(".list-display-field").append(noteDiv);
@@ -75,10 +75,13 @@ $(document).ready(function() {
     //Delete button
     // console.log($(this).attr('class')); // get the attribute of the current button
     // console.log($(this).attr("id"));
-    var thisId = $(this).attr("id");
-    console.log(thisId);
-    console.log($(`#${thisId}`));
-    $(`#${thisId}`).remove();
+    var thisClasses = $(this).attr("data-note");
+    // console.log(thisClasses);
+    // console.log($(`span[data-note='${thisClasses}']`).text());
+    var titleText = $(`span[data-note='${thisClasses}']`).text();
+    // console.log($(`button.${thisId}`));
+    localStorage.removeItem(titleText);
+    $(`[data-note='${thisClasses}']`).remove();
     // target all elements with the class note-data and $(this).attr("id")
     // .remove them
   });
