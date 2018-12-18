@@ -73,3 +73,10 @@ button{
    background-color: grey;
    color:white;
 }
+.note{
+   background-color: lightgrey;
+   min-width: 80%;
+   padding: 5px;
+   margin: 10px;
+   border-radius: 8px;
+}
