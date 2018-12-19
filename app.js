@@ -65,7 +65,7 @@ $(document).ready(function() {
 
   $(".select-menu").on("change", function() {
     //Strategy: if the drop-down menu .val() !== 'Create New Note' fill the text-area with the value from the key selected by the drop-down menu and set the title to === the key selected by the drop-down menu. Else clear the text-area.
-    console.log($(this).val());
+    // console.log($(this).val());
     // if this value !== 'create'
     if($(this).val() !== 'create'){
       // set variable to selected value
@@ -76,17 +76,15 @@ $(document).ready(function() {
       $('.text-entry-content').val(localStorage.getItem(selectedVal));
     } else{
       //clear title input
-      console.log('Else fired!')
-      $('.text-entry-title').removeAttr('value');
-      $('.text-entry-title').attr('placeholder', 'Title');
+      // console.log('Else fired!')
+      $('.text-entry-title').val('');
       //clear textarea
-      $('.text-entry-content').removeAttr('value');
-      $('.text-entry-content').attr('placeholder', 'Note content');
+      $('.text-entry-content').val('');
     }
   });
 
   // write to local storage from input when button save clicked
-  $(".btn-submit").on("click", `button`, function() {
+  $(".btn-submit").on("click", "button", function() {
     // console.log($('.text-entry-title').val());
 
     if ($(".text-entry-title").val() !== "") {
@@ -98,6 +96,8 @@ $(document).ready(function() {
         $(".text-entry-title").val(),
         $(".text-entry-content").val()
       );
+      $(".text-entry-title").val('');
+      $(".text-entry-content").val('');
       $(".list-display-field").html(" ");
       repopulateNotesOnPage();
       buildDropDownMenu();
