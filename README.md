@@ -24,16 +24,16 @@ Create Read Update Delete using localStorage with JS, HTML and CSS
 #### Overview:
 I'd like to build a note-keeping app. At the most basic level, this app should be able to:
 
-- [ ] Allow the user to create notes that include:
-    - [ ] A title
-    - [ ] Content
-    - [ ] Delete button
-- [ ] Store users notes
-- [ ] Allow the user to view all their notes
-- [ ] Allow the user to delete their notes using a delete btn attached to each note
+- [x] Allow the user to create notes that include:
+    - [x] A title
+    - [x] Content
+    - [x] Delete button
+- [x] Store users notes
+- [x] Allow the user to view all their notes
+- [x] Allow the user to delete their notes using a delete btn attached to each note
 - [ ] Allow the user to edit their notes simply by clicking on it
 
-- [ ] Styling should also be included in this section. It doesn't have to be perfect, however, it should have a bit of a refined look (ie. NOT a site from 1995).
+- [x] Styling should also be included in this section. It doesn't have to be perfect, however, it should have a bit of a refined look (ie. NOT a site from 1995).
 
 Optional:
 
