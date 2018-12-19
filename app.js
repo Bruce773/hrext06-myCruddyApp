@@ -1,6 +1,17 @@
 $(document).ready(function() {
   console.log("jQuery loaded");
   // console.log(localStorage.key(0));
+
+  // Build dropdown menu. 
+  var buildDropDownMenu = function (){
+    for (var i = 0; i < localStorage.length; i++) {
+      var currentTitle = localStorage.key(i);
+      var optionElement = $(`<option value="${currentTitle}">${currentTitle}</option>`);
+      $('.select-menu').append(optionElement);
+    }
+  }
+  buildDropDownMenu()
+
   var idCounter = 0;
   var appendNoteDiv = function(title, content) {
     // console.log($('.text-entry-title').val(), myItemInStorage);
@@ -49,9 +60,19 @@ $(document).ready(function() {
     }
   };
   autoRepopulateFunc();
+
+  $(".select-menu").on("change", function() {
+    //Strategy: if the drop-down menu .val() !== 'Create New Note' fill the text-area with the value from the key selected by the drop-down menu and set the title to === the key selected by the drop-down menu. Else clear the text-area.
+    // console.log($(this).val());
+    // if this value !== 'Create New Note'
+      // set variable to selected value
+      // 
+  });
+
   // write to local storage from input when button save clicked
   $(".btn-submit").on("click", `button`, function() {
     // console.log($('.text-entry-title').val());
+
     if ($(".text-entry-title").val() !== "") {
       //if the title input is not blank
       //if the title already exists and the content input is not blank
