@@ -4,13 +4,15 @@ $(document).ready(function() {
 
   // Build dropdown menu. 
   var buildDropDownMenu = function (){
+    $('.select-menu').html(' ');
+    $('.select-menu').append('<option value="create">Create New Note</option>');
     for (var i = 0; i < localStorage.length; i++) {
       var currentTitle = localStorage.key(i);
       var optionElement = $(`<option value="${currentTitle}">${currentTitle}</option>`);
       $('.select-menu').append(optionElement);
     }
   }
-  buildDropDownMenu()
+  buildDropDownMenu();
 
   var idCounter = 0;
   var appendNoteDiv = function(title, content) {
@@ -63,10 +65,24 @@ $(document).ready(function() {
 
   $(".select-menu").on("change", function() {
     //Strategy: if the drop-down menu .val() !== 'Create New Note' fill the text-area with the value from the key selected by the drop-down menu and set the title to === the key selected by the drop-down menu. Else clear the text-area.
-    // console.log($(this).val());
-    // if this value !== 'Create New Note'
+    console.log($(this).val());
+    // if this value !== 'create'
+    if($(this).val() !== 'create'){
       // set variable to selected value
-      // 
+      var selectedVal = $(this).val();
+      // set the title input text to variable
+      $('.text-entry-title').val(selectedVal);
+      // set the textarea to localStorage.getItem(variable)
+      $('.text-entry-content').val(localStorage.getItem(selectedVal));
+    } else{
+      //clear title input
+      console.log('Else fired!')
+      $('.text-entry-title').removeAttr('value');
+      $('.text-entry-title').attr('placeholder', 'Title');
+      //clear textarea
+      $('.text-entry-content').removeAttr('value');
+      $('.text-entry-content').attr('placeholder', 'Note content');
+    }
   });
 
   // write to local storage from input when button save clicked
@@ -84,6 +100,7 @@ $(document).ready(function() {
       );
       $(".list-display-field").html(" ");
       repopulateNotesOnPage();
+      buildDropDownMenu();
 
       // $('.text-entry-content').html(' ')
       // console.log($('.text-entry-content').val());
@@ -105,6 +122,7 @@ $(document).ready(function() {
     localStorage.removeItem(titleText);
     $(`[data-note='${thisClasses}']`).remove();
     autoRepopulateFunc();
+    buildDropDownMenu();
     // target all elements with the class note-data and $(this).attr("id")
     // .remove them
   });
@@ -115,5 +133,6 @@ $(document).ready(function() {
     localStorage.clear();
     $(".list-display-field").html(" ");
     autoRepopulateFunc();
+    buildDropDownMenu();
   });
 });
