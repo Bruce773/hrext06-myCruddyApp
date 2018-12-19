@@ -25,7 +25,12 @@
         <button class="btn-delete-all" type="button">Delete ALL Notes</button>
       </div>
       <div class="create-notes-section">
-        <input class="text-entry-title" type="text" placeholder="Title" />
+        <div class="title-and-select-area">
+          <input class="text-entry-title" type="text" placeholder="Title" />
+          <select class="select-menu" aria-placeholder="Select a Note to edit">
+            <option value="create">Create New Note</option>
+          </select>
+        </div>
         <textarea
           class="text-entry-content"
           type="text"

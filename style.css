@@ -36,9 +36,11 @@ button:hover{
   width: 70%;
 }
 .text-entry-title {
-  display: block;
+  /* display: inline; */
   border-radius: 6px;
   font-size: 20px;
+  /* text-align: left;
+  margin:auto; */
 }
 .text-entry-content {
   display: block;
@@ -121,7 +123,10 @@ button {
   font-size: 20px;
   font-weight: 500;
 }
-/* .delete-this-note-div{
-   text-align:right;
-   margin:auto;
-} */
+.select-menu{
+   margin-left: 10px;
+   font-size: 18px;
+}
+.title-and-select-area{
+   text-align: left;
+}
