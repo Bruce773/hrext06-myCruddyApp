@@ -49,7 +49,7 @@ button:hover{
   border-radius: 6px;
   margin-top: 6px;
   margin-bottom: 6px;
-  font-size: 15px;
+  font-size: 18px;
 }
 button {
   cursor: pointer;
@@ -117,16 +117,21 @@ button {
   margin-top: 10px;
   white-space: pre-wrap;
   text-align: left;
-  font-size: 18px;
+  font-size: 22px;
+  padding: 6px;
 }
 .no-notes-p-tag {
   font-size: 20px;
   font-weight: 500;
 }
 .select-menu{
-   margin-left: 10px;
+   margin-left: 5px;
    font-size: 18px;
 }
 .title-and-select-area{
    text-align: left;
+}
+.select-label{
+   font-size: 24px;
+   margin-left: 10px;
 }
